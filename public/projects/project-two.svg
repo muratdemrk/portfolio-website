@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480" role="img" aria-label="Quote App preview">
+  <rect width="800" height="480" fill="#0d2137"/>
+  <rect x="270" y="36" width="260" height="408" rx="36" fill="#112240" stroke="#233554" stroke-width="4"/>
+  <rect x="292" y="72" width="216" height="336" rx="16" fill="#0a192f"/>
+  <rect x="312" y="92" width="176" height="12" rx="6" fill="#ccd6f6"/>
+  <rect x="332" y="128" width="136" height="8" rx="4" fill="#64ffda" opacity="0.7"/>
+  <rect x="312" y="168" width="176" height="120" rx="12" fill="#1a365d"/>
+  <rect x="328" y="188" width="144" height="8" rx="4" fill="#ccd6f6"/>
+  <rect x="328" y="208" width="128" height="8" rx="4" fill="#8892b0"/>
+  <rect x="328" y="228" width="112" height="8" rx="4" fill="#8892b0" opacity="0.7"/>
+  <rect x="328" y="256" width="72" height="8" rx="4" fill="#64ffda" opacity="0.5"/>
+  <rect x="312" y="308" width="80" height="36" rx="10" fill="#1a365d"/>
+  <rect x="408" y="308" width="80" height="36" rx="10" fill="#1a365d"/>
+  <circle cx="400" cy="52" r="6" fill="#233554"/>
+</svg>

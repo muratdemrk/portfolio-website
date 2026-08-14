@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480" role="img" aria-label="Blackjack preview">
+  <rect width="800" height="480" fill="#0d2137"/>
+  <rect x="80" y="48" width="640" height="384" rx="18" fill="#112240"/>
+  <ellipse cx="400" cy="240" rx="240" ry="140" fill="#0a192f"/>
+  <rect x="292" y="168" width="72" height="104" rx="8" fill="#ccd6f6"/>
+  <rect x="304" y="180" width="20" height="20" rx="3" fill="#e11d48"/>
+  <rect x="436" y="168" width="72" height="104" rx="8" fill="#ccd6f6"/>
+  <rect x="448" y="180" width="20" height="20" rx="3" fill="#0a192f"/>
+  <rect x="248" y="292" width="72" height="104" rx="8" fill="#ccd6f6" transform="rotate(-8 284 344)"/>
+  <rect x="360" y="300" width="72" height="104" rx="8" fill="#ccd6f6"/>
+  <rect x="472" y="292" width="72" height="104" rx="8" fill="#ccd6f6" transform="rotate(8 508 344)"/>
+  <rect x="292" y="80" width="216" height="14" rx="7" fill="#64ffda" opacity="0.7"/>
+</svg>
