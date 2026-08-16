@@ -1,10 +1,12 @@
 import type { Messages } from "./types";
 
 export const de: Messages = {
-  greeting: "Hallo, ich bin",
+  greeting: "Hallo, ich bin Murat",
   role: "Informatikingenieur",
   about:
-    "Ich entwickle zuverlässige Webprodukte mit klaren Oberflächen und solider Technik. Komplexe Probleme in ruhige, durchdachte Software zu übersetzen, von der Architektur bis zum letzten Hover-Zustand, liegt mir.",
+    "Ich entwickle Full-Stack-Projekte, vor allem webbasierte Anwendungen.",
+  contactCta: "Kontakt aufnehmen",
+  projectsCta: "Projekte ansehen",
   projectsTitle: "Projekte",
   githubLabel: "Auf GitHub ansehen",
   githubUnavailable: "Noch nicht auf GitHub veröffentlicht",
@@ -12,6 +14,7 @@ export const de: Messages = {
   langLabel: "Sprache",
   navLabel: "Seitenbereiche",
   navProjects: "Projekte",
+  navSocials: "Soziale Konten",
   liveLabel: "Live-Seite öffnen",
   prevImage: "Vorheriges Bild",
   nextImage: "Nächstes Bild",

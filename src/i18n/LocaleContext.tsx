@@ -21,9 +21,9 @@ function isLocale(value: string | null): value is Locale {
 }
 
 function readStoredLocale(): Locale {
-  if (typeof window === 'undefined') return 'en'
+  if (typeof window === 'undefined') return 'tr'
   const stored = window.localStorage.getItem(STORAGE_KEY)
-  return isLocale(stored) ? stored : 'en'
+  return isLocale(stored) ? stored : 'tr'
 }
 
 type LocaleContextValue = {

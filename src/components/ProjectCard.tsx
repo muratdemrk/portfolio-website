@@ -98,10 +98,10 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       viewport={{ once: true, amount: 0.25 }}
       transition={{ duration: 0.45, delay: reduce ? 0 : index * 0.08 }}
       whileHover={reduce ? undefined : { y: -8 }}
-      className="group overflow-hidden rounded-xl border border-slate-700/70 bg-[#112240] shadow-[0_10px_30px_-15px_rgba(2,12,27,0.7)] transition-[border-color,box-shadow] duration-300 hover:border-teal-300/50 hover:shadow-[0_20px_40px_-20px_rgba(100,255,218,0.25)]"
+      className="group overflow-hidden rounded-xl border border-accent/70 bg-[#221e2c]/80 shadow-[0_0_18px_rgba(200,245,66,0.18)] transition-[border-color,box-shadow] duration-300 hover:border-accent hover:shadow-[0_0_28px_rgba(200,245,66,0.35)]"
     >
       <div
-        className="relative h-48 overflow-hidden bg-[#0a192f]"
+        className="relative h-48 overflow-hidden bg-[#1a1722]"
         onPointerDown={onPointerDown}
         onPointerUp={onPointerUp}
         onPointerCancel={() => {
@@ -126,7 +126,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
               }}
               onPointerDown={(event) => event.stopPropagation()}
               aria-label={t.prevImage}
-              className="absolute left-2 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-[#0a192f]/80 text-slate-100 backdrop-blur-sm transition-colors hover:border-teal-300 hover:text-teal-300"
+              className="absolute left-2 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-[#1a1722]/80 text-slate-100 backdrop-blur-sm transition-colors hover:border-accent hover:text-accent"
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
@@ -138,7 +138,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
               }}
               onPointerDown={(event) => event.stopPropagation()}
               aria-label={t.nextImage}
-              className="absolute right-2 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-[#0a192f]/80 text-slate-100 backdrop-blur-sm transition-colors hover:border-teal-300 hover:text-teal-300"
+              className="absolute right-2 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-[#1a1722]/80 text-slate-100 backdrop-blur-sm transition-colors hover:border-accent hover:text-accent"
             >
               <ChevronRight className="h-4 w-4" />
             </button>
@@ -156,7 +156,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
                     setActive(i)
                   }}
                   className={`h-1.5 rounded-full transition-all ${
-                    i === active ? 'w-4 bg-teal-300' : 'w-1.5 bg-white/40 hover:bg-white/70'
+                    i === active ? 'w-4 bg-accent' : 'w-1.5 bg-white/40 hover:bg-white/70'
                   }`}
                 />
               ))}
@@ -174,7 +174,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label={t.liveLabel}
-                className="rounded-md p-1.5 text-slate-400 transition-colors hover:text-teal-300"
+                className="rounded-md p-1.5 text-slate-400 transition-colors hover:text-accent"
               >
                 <ExternalLinkIcon className="h-5 w-5" />
               </a>
@@ -185,7 +185,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label={t.githubLabel}
-                className="rounded-md p-1.5 text-slate-400 transition-colors hover:text-teal-300"
+                className="rounded-md p-1.5 text-slate-400 transition-colors hover:text-accent"
               >
                 <GitHubIcon className="h-5 w-5" />
               </a>
@@ -199,7 +199,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
           {project.tags.map((tag) => (
             <li
               key={tag}
-              className="rounded-full border border-slate-600/80 px-2.5 py-0.5 font-mono text-[11px] text-teal-300/90"
+              className="rounded-full border border-slate-600/80 px-2.5 py-0.5 font-mono text-[11px] text-accent/90"
             >
               {tag}
             </li>
@@ -209,7 +209,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       {open &&
         createPortal(
           <div
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-[#020617]/90 p-4 backdrop-blur-sm"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-[#120f18]/90 p-4 backdrop-blur-sm"
             onClick={() => setOpen(false)}
             role="dialog"
             aria-modal="true"
@@ -219,7 +219,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
               type="button"
               onClick={() => setOpen(false)}
               aria-label={t.closeImage}
-              className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-[#0a192f]/80 text-slate-100 transition-colors hover:border-teal-300 hover:text-teal-300"
+              className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-[#1a1722]/80 text-slate-100 transition-colors hover:border-accent hover:text-accent"
             >
               <span className="text-2xl leading-none">×</span>
             </button>
@@ -231,7 +231,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
                   go(-1)
                 }}
                 aria-label={t.prevImage}
-                className="absolute left-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-[#0a192f]/80 text-slate-100 transition-colors hover:border-teal-300 hover:text-teal-300"
+                className="absolute left-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-[#1a1722]/80 text-slate-100 transition-colors hover:border-accent hover:text-accent"
               >
                 <ChevronLeft className="h-6 w-6" />
               </button>
@@ -244,7 +244,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
                   go(1)
                 }}
                 aria-label={t.nextImage}
-                className="absolute right-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-[#0a192f]/80 text-slate-100 transition-colors hover:border-teal-300 hover:text-teal-300"
+                className="absolute right-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-[#1a1722]/80 text-slate-100 transition-colors hover:border-accent hover:text-accent"
               >
                 <ChevronRight className="h-6 w-6" />
               </button>
@@ -283,7 +283,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
                     aria-label={`${i + 1} / ${images.length}`}
                     onClick={() => setActive(i)}
                     className={`h-2 rounded-full transition-all ${
-                      i === active ? 'w-6 bg-teal-300' : 'w-2 bg-white/40 hover:bg-white/70'
+                      i === active ? 'w-6 bg-accent' : 'w-2 bg-white/40 hover:bg-white/70'
                     }`}
                   />
                 ))}

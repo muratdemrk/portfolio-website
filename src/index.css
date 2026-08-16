@@ -1,9 +1,11 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-display: 'Outfit', system-ui, sans-serif;
-  --font-sans: 'Source Sans 3', system-ui, sans-serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-display: 'Oswald', system-ui, sans-serif;
+  --font-sans: 'Oswald', system-ui, sans-serif;
+  --font-mono: 'Oswald', system-ui, sans-serif;
+  --color-accent: #c8f542;
+  --color-ink: #1a1722;
 }
 
 html {
@@ -13,8 +15,43 @@ html {
 body {
   margin: 0;
   font-family: var(--font-sans);
-  background: #0a192f;
-  color: #8892b0;
+  background: #1a1722;
+  color: #b8b4c4;
+}
+
+@keyframes projects-cta-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(200, 245, 66, 0.45), 0 0 22px rgba(200, 245, 66, 0.28);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(200, 245, 66, 0), 0 0 34px rgba(200, 245, 66, 0.55);
+  }
+}
+
+@keyframes projects-cta-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.65;
+  }
+  100% {
+    transform: scale(1.28);
+    opacity: 0;
+  }
+}
+
+.projects-cta {
+  animation: projects-cta-glow 2.4s ease-in-out 1.15s infinite;
+}
+
+.projects-cta::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 9999px;
+  border: 2px solid rgba(200, 245, 66, 0.7);
+  animation: projects-cta-ring 2.4s ease-out 1.15s infinite;
+  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
