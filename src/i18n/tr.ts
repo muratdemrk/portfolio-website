@@ -1,10 +1,12 @@
 import type { Messages } from "./types";
 
 export const tr: Messages = {
-  greeting: "Merhaba, ben",
+  greeting: "Merhaba ben Murat",
   role: "Bilgisayar Mühendisi",
   about:
-    "Net arayüzler ve sağlam mühendislik ile güvenilir web ürünleri geliştiriyorum. Karmaşık problemleri sakin, özenli yazılıma dönüştürmeyi seviyorum — mimariden son hover durumuna kadar.",
+    "web odaklı uygulamalar başta olmak üzere full-stack projeler geliştiriyorum.",
+  contactCta: "Benimle iletişime geç",
+  projectsCta: "Projelerime göz at",
   projectsTitle: "Projeler",
   githubLabel: "GitHub’da görüntüle",
   githubUnavailable: "Henüz GitHub’da yayınlanmadı",
@@ -12,6 +14,7 @@ export const tr: Messages = {
   langLabel: "Dil",
   navLabel: "Sayfa bölümleri",
   navProjects: "Projelerim",
+  navSocials: "Sosyal hesaplarım",
   liveLabel: "Canlı siteyi aç",
   prevImage: "Önceki görsel",
   nextImage: "Sonraki görsel",
