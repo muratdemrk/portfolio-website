@@ -45,7 +45,7 @@ function MailIcon(props: IconProps) {
 }
 
 const linkClass =
-  'flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-accent/70 text-zinc-300 shadow-[0_0_12px_rgba(200,245,66,0.18)] transition-[transform,box-shadow,border-color,color] duration-500 ease-out hover:border-accent hover:text-accent hover:shadow-[0_0_20px_rgba(200,245,66,0.35)] sm:h-11 sm:w-11'
+  'flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-accent/70 text-zinc-300 shadow-[0_0_12px_rgba(200,245,66,0.18)] transition-[transform,box-shadow,border-color,color] duration-[1100ms] ease-in-out hover:border-accent hover:text-accent hover:shadow-[0_0_20px_rgba(200,245,66,0.35)] sm:h-11 sm:w-11'
 
 const links: { href: string; label: string; icon: ComponentType<IconProps>; external?: boolean }[] = [
   { href: profile.socials.github, label: 'GitHub', icon: GitHubIcon, external: true },
@@ -62,7 +62,7 @@ export function SocialBar({ className = '' }: { className?: string }) {
     const onFocus = () => {
       window.setTimeout(() => {
         setPulse(true)
-        window.setTimeout(() => setPulse(false), 1100)
+        window.setTimeout(() => setPulse(false), 2200)
       }, 380)
     }
 
@@ -71,7 +71,11 @@ export function SocialBar({ className = '' }: { className?: string }) {
   }, [])
 
   return (
-    <div className={`flex items-center gap-2 sm:gap-4 ${className}`}>
+    <div
+      className={`flex items-center transition-[gap] duration-[1100ms] ease-in-out ${
+        pulse ? 'gap-14 sm:gap-20' : 'gap-2 sm:gap-4'
+      } ${className}`}
+    >
       {links.map(({ href, label, icon: Icon, external }, index) => (
         <a
           key={label}
@@ -79,10 +83,10 @@ export function SocialBar({ className = '' }: { className?: string }) {
           target={external ? '_blank' : undefined}
           rel={external ? 'noreferrer noopener' : undefined}
           aria-label={label}
-          style={{ transitionDelay: pulse ? `${index * 70}ms` : '0ms' }}
+          style={{ transitionDelay: pulse ? `${index * 110}ms` : `${index * 80}ms` }}
           className={`${linkClass} ${
             pulse
-              ? 'scale-125 border-accent text-accent shadow-[0_0_28px_rgba(200,245,66,0.5)]'
+              ? 'z-10 scale-[2] border-accent text-accent shadow-[0_0_40px_rgba(200,245,66,0.7)]'
               : 'scale-100'
           }`}
         >

@@ -7,7 +7,7 @@ export function Hero() {
   const words = t.greeting.split(' ')
 
   return (
-    <section className="flex min-h-svh flex-col justify-center px-6 pb-16 pt-24">
+    <section className="flex min-h-[calc(100svh-2.5rem)] flex-col justify-center px-6 pb-16 pt-10 sm:min-h-[calc(100svh-4rem)] lg:pt-8">
       <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-12 lg:flex-row lg:items-center lg:justify-between lg:gap-16">
         <div className="w-full min-w-0 lg:flex-1">
           <h1 className="font-display text-5xl font-semibold tracking-wide text-zinc-100 sm:text-7xl">

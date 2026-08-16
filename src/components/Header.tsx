@@ -12,7 +12,7 @@ export function Header() {
   const { locale, setLocale, t } = useLocale()
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-[#1a1722]/70 backdrop-blur-md">
+    <header className="sticky top-0 z-50 rounded-t-[1.75rem] border-b border-white/5 bg-[#1a1722]/85 backdrop-blur-md sm:rounded-t-[2rem]">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between gap-3 px-6">
         <a
           href="#sosyal"
