@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { useLocale } from '../i18n/LocaleContext'
+import { asset } from '../lib/asset'
 
 export function Hero() {
   const { locale, t } = useLocale()
@@ -63,7 +64,7 @@ export function Hero() {
           <div className="absolute inset-[-12%] rounded-full bg-accent/15 blur-3xl transition-all duration-500 group-hover:inset-[-18%] group-hover:bg-accent/35" />
           <div className="relative h-80 w-80 overflow-hidden rounded-full border-2 border-accent/45 shadow-[0_0_40px_rgba(200,245,66,0.18)] transition-[transform,box-shadow,border-color] duration-500 ease-out group-hover:scale-[1.05] group-hover:border-accent group-hover:shadow-[0_0_56px_rgba(200,245,66,0.45)] sm:h-[26rem] sm:w-[26rem] lg:h-[32rem] lg:w-[32rem]">
             <img
-              src="/portrait.png"
+              src={asset('portrait.png')}
               alt="Murat"
               className="h-full w-full object-contain transition-transform duration-500 ease-out group-hover:scale-105"
             />

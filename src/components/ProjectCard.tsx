@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom'
 import { motion, useReducedMotion } from 'framer-motion'
 import type { Project } from '../data/projects'
 import { useLocale } from '../i18n/LocaleContext'
+import { asset } from '../lib/asset'
 
 function GitHubIcon({ className }: { className?: string }) {
   return (
@@ -42,7 +43,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
   const { t } = useLocale()
   const reduce = useReducedMotion()
   const copy = t.projects[project.id]
-  const images = project.images
+  const images = project.images.map(asset)
   const [active, setActive] = useState(0)
   const [open, setOpen] = useState(false)
   const startX = useRef<number | null>(null)
